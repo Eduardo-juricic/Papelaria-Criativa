@@ -6,7 +6,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
-      // ... suas keyframes e animations aqui (se houver)
+      colors: {
+        "custom-yellow": "#FFD700", // Amarelo
+        "custom-pink": "#FF69B4", // Rosa
+        "custom-blue": "#87CEEB", // Azul bebê
+      },
       keyframes: {
         fadeInUp: {
           "0%": { opacity: "0", transform: "translateY(20px)" },

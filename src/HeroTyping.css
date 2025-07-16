@@ -1,0 +1,10 @@
+.typing-container {
+  position: relative;
+  display: inline;
+  /* Garante que o espaço seja reservado mesmo quando vazio, evitando "pulos" */
+  min-height: 1.2em;
+}
+
+/* Todo o código referente ao pseudo-elemento ::after
+  e à animação @keyframes blink foi removido.
+*/
