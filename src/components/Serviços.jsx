@@ -1,123 +1,142 @@
-// src/components/Serviços.jsx
+// src/components/Servicos.jsx
 
-import React from "react";
-// Importação do vídeo
-import videoFile from "../assets/videorell.mp4";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+import { Sparkles, Palette, Gem } from "lucide-react"; // Ícones para as features
 
+// Textos atualizados para a loja de papelaria
 const features = [
   {
-    icon: (
-      <svg
-        className="w-10 h-10 text-pink-600"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.099 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-        ></path>
-      </svg>
-    ),
-    title: "Feito à Mão com Amor",
+    icon: <Sparkles className="w-full h-full" strokeWidth={1.5} />,
+    title: "Design Único e Personalizado",
     description:
-      "Cada peça é criada com dedicação e atenção aos mínimos detalhes, garantindo um produto único e de alta qualidade.",
+      "Criamos cada detalhe com você, desde cadernos e planners a convites e adesivos, garantindo que cada item seja um reflexo fiel do seu estilo.",
   },
   {
-    icon: (
-      <svg
-        className="w-10 h-10 text-pink-600"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M7.217 10.38V18m0 0a2.25 2.25 0 002.25 2.25H18a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25h-5.46a2.25 2.25 0 00-1.748.77l-4.303 4.302zM19.5 9L15 4.5"
-        ></path>
-      </svg>
-    ),
-    title: "Personalização Completa",
+    icon: <Palette className="w-full h-full" strokeWidth={1.5} />,
+    title: "Qualidade em Cada Folha",
     description:
-      "Deixe sua criatividade fluir! Personalizamos cores, temas, nomes, fotos e tudo mais para refletir seu estilo.",
+      "Utilizamos materiais de alta qualidade e técnicas de impressão impecáveis para que seus produtos sejam tão duráveis quanto encantadores.",
   },
   {
-    icon: (
-      <svg
-        className="w-10 h-10 text-pink-600"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M15.59 14.379L11.332 18.63c-1.666 1.666-4.385 1.666-6.051 0-1.667-1.666-1.667-4.384 0-6.05l4.25-4.25m-2.127 6.051l4.25-4.25m6.051-2.127l-4.25 4.25"
-        ></path>
-      </svg>
-    ),
-    title: "Agilidade na Entrega",
+    icon: <Gem className="w-full h-full" strokeWidth={1.5} />,
+    title: "Da Sua Ideia à Realidade",
     description:
-      "Sabemos da sua ansiedade! Trabalhamos para entregar seu pedido personalizado com rapidez e segurança.",
+      "Transformamos sua visão em papelaria exclusiva. Seja para um presente, seu negócio ou para organizar sua rotina, estamos aqui para criar com você.",
   },
 ];
 
-function Features() {
-  return (
-    <section id="features" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        {/* --- ALTERAÇÃO AQUI --- */}
-        {/* Usamos um grid de 5 colunas para ter mais controle. */}
-        {/* O vídeo ocupará 2 partes e os cards 3 partes. */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-16 items-center">
-          {/* COLUNA DA ESQUERDA (VÍDEO) - Ocupando 2 das 5 colunas */}
-          <div className="md:col-span-2 w-full rounded-2xl overflow-hidden shadow-2xl">
-            <video
-              className="w-full h-full"
-              src={videoFile}
-              autoPlay
-              loop
-              muted
-              playsInline
-            >
-              Seu navegador não suporta a tag de vídeo.
-            </video>
-          </div>
+function Servicos() {
+  // Coloque o ID do seu vídeo do YouTube aqui
+  const youtubeVideoId = "dQw4w9WgXcQ"; // ID de um vídeo de exemplo
+  const videoSrc = `https://www.youtube.com/embed/${youtubeVideoId}?autoplay=0&controls=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3`;
 
-          {/* COLUNA DA DIREITA (CARDS) - Ocupando 3 das 5 colunas */}
-          <div className="md:col-span-3">
-            <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center md:text-left">
-              Por que escolher Com Primor?
-            </h2>
-            <div className="flex flex-col gap-8">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50 p-8 rounded-lg shadow-md transition duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-pink-300"
-                >
-                  <div className="flex items-center gap-4">
-                    {feature.icon}
-                    <h3 className="text-2xl font-semibold text-gray-900">
-                      {feature.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-700 mt-4">{feature.description}</p>
-                </div>
-              ))}
+  const sectionVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
+  const itemVariants = (delay = 0) => ({
+    hidden: { opacity: 0, x: -30 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut", delay },
+    },
+  });
+
+  const videoItemVariants = {
+    hidden: { opacity: 0, scale: 0.85 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.7, ease: [0.6, -0.05, 0.01, 0.99] },
+    },
+  };
+
+  return (
+    <motion.section
+      id="nossa-essencia"
+      // Alteração aqui: fundo branco e ajuste de cores de texto se necessário
+      className="py-20 md:py-28 bg-white overflow-hidden"
+      variants={sectionVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16 md:mb-20">
+          <motion.h2
+            className="text-4xl md:text-5xl font-serif font-bold text-gray-800"
+            variants={videoItemVariants}
+          >
+            Sua Papelaria, Seu Jeito ✨
+          </motion.h2>
+        </div>
+
+        <div className="flex flex-col lg:flex-row items-center lg:items-start lg:gap-x-12 xl:gap-x-16">
+          {/* Coluna do Vídeo */}
+          <motion.div
+            className="w-full lg:w-1/2 mb-12 lg:mb-0"
+            variants={videoItemVariants}
+          >
+            <div
+              className="relative aspect-video rounded-xl overflow-hidden
+                                shadow-2xl border-2 border-pink-300/40"
+            >
+              <iframe
+                src={videoSrc}
+                title="Processo Criativo da Papelaria Personalizada"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full"
+              ></iframe>
             </div>
+            <motion.p
+              className="mt-6 text-center lg:text-left text-gray-600 font-sans text-lg"
+              variants={itemVariants(0.2)}
+            >
+              Veja como a magia acontece em nosso ateliê e inspire-se para
+              criar.
+            </motion.p>
+          </motion.div>
+
+          {/* Coluna das Features (seus cards) */}
+          <div className="w-full lg:w-1/2 space-y-10">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                className="flex items-start gap-x-5"
+                variants={itemVariants(index * 0.2 + 0.4)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                <div
+                  className="mt-1 flex-shrink-0 w-12 h-12 p-2.5 flex items-center justify-center
+                                    bg-pink-100 text-pink-600 rounded-full"
+                >
+                  {feature.icon}
+                </div>
+                <div>
+                  <h3 className="text-2xl font-serif font-semibold text-gray-900 mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-base text-gray-700 font-sans leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
-export default Features;
+export default Servicos;
