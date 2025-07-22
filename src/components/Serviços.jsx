@@ -28,7 +28,7 @@ const features = [
 
 function Servicos() {
   // Coloque o ID do seu vídeo do YouTube aqui
-  const youtubeVideoId = "dQw4w9WgXcQ"; // ID de um vídeo de exemplo
+  const youtubeVideoId = "ki7vpqO6QL8"; // ID de um vídeo de exemplo
   const videoSrc = `https://www.youtube.com/embed/${youtubeVideoId}?autoplay=0&controls=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3`;
 
   const sectionVariants = {
@@ -59,7 +59,7 @@ function Servicos() {
 
   return (
     <motion.section
-      id="nossa-essencia"
+      id="servicos"
       // Alteração aqui: fundo branco e ajuste de cores de texto se necessário
       className="py-20 md:py-28 bg-white overflow-hidden"
       variants={sectionVariants}
@@ -70,7 +70,7 @@ function Servicos() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 md:mb-20">
           <motion.h2
-            className="text-4xl md:text-5xl font-serif font-bold text-gray-800"
+            className="text-4xl md:text-5xl font-heading font-bold text-gray-800"
             variants={videoItemVariants}
           >
             Sua Papelaria, Seu Jeito ✨
@@ -123,10 +123,10 @@ function Servicos() {
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-2xl font-serif font-semibold text-gray-900 mb-2">
+                  <h3 className="text-2xl font-heading font-semibold text-gray-900 mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-base text-gray-700 font-sans leading-relaxed">
+                  <p className="text-base text-gray-700 font-body leading-relaxed">
                     {feature.description}
                   </p>
                 </div>

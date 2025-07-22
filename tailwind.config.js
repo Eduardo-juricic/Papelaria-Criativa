@@ -6,6 +6,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        heading: ['"Cinzel Decorative"', "serif"], // Nova fonte para títulos
+        body: ['"Poppins"', "sans-serif"], // Nova fonte para textos
+      },
       colors: {
         "custom-yellow": "#FFD700", // Amarelo
         "custom-pink": "#FF69B4", // Rosa

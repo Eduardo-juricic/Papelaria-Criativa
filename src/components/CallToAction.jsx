@@ -7,64 +7,84 @@ const CallToAction = () => {
     await loadFull(engine);
   }, []);
 
-  const particleOptions = {
+  // Configuração com mais intensidade e corações vermelhos
+  const intenseHeartOptions = {
     fullScreen: { enable: false },
     background: {
       color: {
-        value: "#0d1117", // Um preto um pouco mais suave
+        value: "transparent",
       },
     },
     particles: {
-      number: { value: 60, density: { enable: true, area: 800 } },
-      color: { value: "#ffffff" },
-      links: {
-        color: "#ffffff",
-        distance: 150,
-        enable: true,
-        opacity: 0.2,
-        width: 1,
+      number: {
+        value: 40, // <<-- AUMENTADO: Mais corações na tela
+      },
+      shape: {
+        type: "char",
+        options: {
+          char: {
+            value: ["❤️", "💖"], // <<-- COR: Coração vermelho e um toque de rosa
+            font: "Verdana",
+            style: "",
+            weight: "400",
+            fill: true,
+          },
+        },
       },
       move: {
         enable: true,
-        speed: 1,
-        direction: "none",
-        random: false,
+        speed: 2, // <<-- AUMENTADO: Movimento mais notável
+        direction: "right",
+        random: true,
         straight: false,
-        outModes: "out",
+        outModes: {
+          default: "out",
+        },
       },
-      opacity: { value: 0.3 },
-      size: { value: { min: 1, max: 3 } },
+      opacity: {
+        value: { min: 0.3, max: 0.8 }, // <<-- AUMENTADO: Corações mais visíveis
+      },
+      size: {
+        value: { min: 10, max: 25 }, // Tamanho um pouco maior para mais impacto
+      },
+    },
+    interactivity: {
+      events: {
+        onHover: {
+          enable: false,
+        },
+        onClick: {
+          enable: false,
+        },
+      },
     },
     detectRetina: true,
   };
 
   return (
-    <section className="relative bg-slate-900 text-white py-20 sm:py-28 text-center overflow-hidden">
-      {/* --- MUDANÇA IMPORTANTE AQUI --- */}
+    // Mantendo o fundo suave que combina com as cores
+    <section className="relative bg-gradient-to-br from-pink-50 to-red-100 py-20 sm:py-28 text-center overflow-hidden">
       <Particles
-        id="tsparticles-cta"
+        id="tsparticles-intense-hearts"
         init={particlesInit}
-        options={particleOptions}
-        className="absolute inset-0"
+        options={intenseHeartOptions}
+        className="absolute inset-0 z-0"
       />
-      <div className="relative z-10 max-w-xl mx-auto px-6">
-        <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 animate-fade-in-up leading-tight">
-          Transforme suas ideias em realidade brilhante ✨
+      <div className="relative z-10 max-w-2xl mx-auto px-6">
+        <h3 className="text-4xl sm:text-5xl font-heading font-bold mb-6 text-gray-800 leading-tight">
+          Criatividade que pulsa em cada detalhe
         </h3>
-        <p
-          className="text-base sm:text-lg md:text-2xl mb-8 opacity-90 animate-fade-in max-w-md mx-auto"
-          style={{ animationDelay: "0.3s", animationFillMode: "both" }}
-        >
-          Produtos artesanais feitos para encantar e emocionar.
+        <p className="text-lg sm:text-xl mb-10 text-gray-600 font-body max-w-lg mx-auto">
+          Deixe-nos fazer parte da sua história com produtos feitos com paixão e
+          exclusividade.
         </p>
         <a
           href="https://wa.me/message/UUG3ASGMKYAYE1"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative inline-block w-full sm:w-auto px-8 sm:px-10 py-4 rounded-full text-lg font-bold bg-gradient-to-r from-purple-500 to-indigo-600 text-white shadow-lg hover:scale-105 transition-transform duration-300 animate-pulse"
-          style={{ animationDelay: "0.6s", animationFillMode: "both" }}
+          className="inline-block px-10 py-4 rounded-full text-lg font-bold bg-pink-500 text-white shadow-lg hover:bg-pink-600 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50 transition-all duration-300"
         >
-          Faça sua Personalização
+          Personalize seu Sonho
         </a>
       </div>
     </section>

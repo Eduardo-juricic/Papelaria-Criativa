@@ -30,7 +30,7 @@ function Header() {
             </li>
             <li>
               <a
-                href="#features"
+                href="#servicos"
                 className="text-lg font-medium text-gray-700 hover:text-custom-pink transition duration-300"
               >
                 Serviços
@@ -98,7 +98,7 @@ function Header() {
             </li>
             <li>
               <a
-                href="#features"
+                href="#servicos"
                 onClick={() => setIsOpen(false)}
                 className="block text-lg font-medium text-gray-700 hover:text-custom-pink"
               >
