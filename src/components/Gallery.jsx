@@ -6,7 +6,7 @@ import cadernetaSaude from "../assets/caderneta-saude.jpg";
 import planejadoresCalendarios from "../assets/planejadores-calendarios.jpg";
 import mimosSucesso from "../assets/mimos-sucesso.jpg";
 import diarioDevocional from "../assets/diario-devocional.jpg";
-import prontosParaEncantar from "../assets/prontos-para-encantar.jpg";
+import prontosParaEncantar from "../assets/prontos-para-encantar.jpg"; // A imagem ainda pode ser usada
 import agendaatendimento from "../assets/agenda-atendimento.jpg";
 import agendacarro from "../assets/agenda-carro.jpg";
 import agendaserraazul from "../assets/agenda-serra-azul.jpg";
@@ -60,7 +60,7 @@ import duodeterminada from "../assets/duo-determinada.jpg";
 import listinhas from "../assets/listinhas.jpg";
 import trioanotacao from "../assets/trio-anotacao.jpg";
 
-// --- LISTA DE PRODUTOS (ORDEM E NOMES ATUALIZADOS) ---
+// --- LISTA DE PRODUTOS (CATEGORIA ATUALIZADA) ---
 const products = [
   {
     id: 1,
@@ -68,7 +68,6 @@ const products = [
     name: "Agendas Personalizadas",
     image: agendasPersonalizadas,
   },
-  // --- ALTERAÇÃO FEITA AQUI: O produto ID 21 foi movido para o topo da categoria "Maternidade" ---
   {
     id: 21,
     category: "maternidade",
@@ -99,12 +98,68 @@ const products = [
     name: "Diário Devocional",
     image: diarioDevocional,
   },
+  // --- ALTERAÇÕES NESTE BLOCO ---
   {
     id: 6,
-    category: "prontos-para-encantar",
-    name: "Prontos para Encantar",
+    category: "pronta-entrega",
+    name: "Itens a Pronta Entrega",
     image: prontosParaEncantar,
   },
+  {
+    id: 52,
+    category: "pronta-entrega",
+    name: "Bloco Organizador",
+    image: blocoorganizador,
+  },
+  {
+    id: 53,
+    category: "pronta-entrega",
+    name: "Bloquinhos",
+    image: bloquinhos,
+  },
+  {
+    id: 54,
+    category: "pronta-entrega",
+    name: "Mimos de Sucesso",
+    image: mimosSucesso,
+  },
+  {
+    id: 55,
+    category: "pronta-entrega",
+    name: "Cadernetas de Anotação",
+    image: cadernetasdeanotacao,
+  },
+  {
+    id: 56,
+    category: "pronta-entrega",
+    name: "Caderno de Anotação",
+    image: cadernoanotacao,
+  },
+  {
+    id: 57,
+    category: "pronta-entrega",
+    name: "Caderno de Adesivos",
+    image: cadernodeadesivos,
+  },
+  {
+    id: 58,
+    category: "pronta-entrega",
+    name: "Duo Determinada",
+    image: duodeterminada,
+  },
+  {
+    id: 59,
+    category: "pronta-entrega",
+    name: "Listinhas",
+    image: listinhas,
+  },
+  {
+    id: 60,
+    category: "pronta-entrega",
+    name: "Trio de Anotação",
+    image: trioanotacao,
+  },
+  // --- FIM DO BLOCO DE ALTERAÇÕES ---
   {
     id: 7,
     category: "agendas-personalizadas",
@@ -369,60 +424,6 @@ const products = [
     name: "Livro Caixa",
     image: livrocaixa,
   },
-  {
-    id: 52,
-    category: "prontos-para-encantar",
-    name: "Bloco Organizador",
-    image: blocoorganizador,
-  },
-  {
-    id: 53,
-    category: "prontos-para-encantar",
-    name: "Bloquinhos",
-    image: bloquinhos,
-  },
-  {
-    id: 54,
-    category: "prontos-para-encantar",
-    name: "Mimos de Sucesso",
-    image: mimosSucesso,
-  },
-  {
-    id: 55,
-    category: "prontos-para-encantar",
-    name: "Cadernetas de Anotação",
-    image: cadernetasdeanotacao,
-  },
-  {
-    id: 56,
-    category: "prontos-para-encantar",
-    name: "Caderno de Anotação",
-    image: cadernoanotacao,
-  },
-  {
-    id: 57,
-    category: "prontos-para-encantar",
-    name: "Caderno de Adesivos",
-    image: cadernodeadesivos,
-  },
-  {
-    id: 58,
-    category: "prontos-para-encantar",
-    name: "Duo Determinada",
-    image: duodeterminada,
-  },
-  {
-    id: 59,
-    category: "prontos-para-encantar",
-    name: "Listinhas",
-    image: listinhas,
-  },
-  {
-    id: 60,
-    category: "prontos-para-encantar",
-    name: "Trio de Anotação",
-    image: trioanotacao,
-  },
 ];
 
 function Gallery() {
@@ -455,7 +456,8 @@ function Gallery() {
               value: "organizacao-e-inspiracao",
               label: "Organização e Inspiração",
             },
-            { value: "prontos-para-encantar", label: "Prontos para Encantar" },
+            // --- ALTERAÇÃO FEITA AQUI ---
+            { value: "pronta-entrega", label: "Pronta Entrega" },
           ].map((cat) => (
             <button
               key={cat.value}
