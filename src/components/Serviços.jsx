@@ -10,7 +10,7 @@ const features = [
     icon: <Sparkles className="w-full h-full" strokeWidth={1.5} />,
     title: "Design Único e Personalizado",
     description:
-      "Criamos cada detalhe com você, desde cadernos e planners a convites e adesivos, garantindo que cada item seja um reflexo fiel do seu estilo.",
+      "Criamos cada detalhe com você, desde cadernos e planners a mimos de sucesso, garantindo que cada item seja um reflexo fiel do seu estilo.",
   },
   {
     icon: <Palette className="w-full h-full" strokeWidth={1.5} />,
@@ -20,9 +20,9 @@ const features = [
   },
   {
     icon: <Gem className="w-full h-full" strokeWidth={1.5} />,
-    title: "Da Sua Ideia à Realidade",
+    title: "Metamorfose Criativa",
     description:
-      "Transformamos sua visão em papelaria exclusiva. Seja para um presente, seu negócio ou para organizar sua rotina, estamos aqui para criar com você.",
+      "Como a borboleta, cada criação passa por uma metamorfose. Assim como a lagarta que se transforma em borboleta, damos vida ao papel, convertendo-o em peças únicas que colorem seus sonhos. Do coração nasce o cuidado, sua ideia é o casulo e nós ajudamos a libertar as asas.",
   },
 ];
 

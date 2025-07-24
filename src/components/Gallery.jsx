@@ -60,13 +60,20 @@ import duodeterminada from "../assets/duo-determinada.jpg";
 import listinhas from "../assets/listinhas.jpg";
 import trioanotacao from "../assets/trio-anotacao.jpg";
 
-// --- LISTA DE PRODUTOS (nenhuma alteração aqui) ---
+// --- LISTA DE PRODUTOS (ORDEM E NOMES ATUALIZADOS) ---
 const products = [
   {
     id: 1,
-    category: "prontos-para-encantar",
+    category: "agendas-personalizadas",
     name: "Agendas Personalizadas",
     image: agendasPersonalizadas,
+  },
+  // --- ALTERAÇÃO FEITA AQUI: O produto ID 21 foi movido para o topo da categoria "Maternidade" ---
+  {
+    id: 21,
+    category: "maternidade",
+    name: "Álbum de Fotos",
+    image: albumdefotos,
   },
   {
     id: 2,
@@ -83,7 +90,7 @@ const products = [
   {
     id: 4,
     category: "mimos-de-sucesso",
-    name: "Bloquinhos de Colorir",
+    name: "Mimos de Sucesso",
     image: mimosSucesso,
   },
   {
@@ -94,341 +101,333 @@ const products = [
   },
   {
     id: 6,
-    category: "agendas-personalizadas",
-    name: "Agendas para Eventos",
+    category: "prontos-para-encantar",
+    name: "Prontos para Encantar",
     image: prontosParaEncantar,
   },
   {
     id: 7,
     category: "agendas-personalizadas",
-    name: "Agendas para Eventos",
+    name: "Agenda de Atendimento",
     image: agendaatendimento,
   },
   {
     id: 8,
     category: "agendas-personalizadas",
-    name: "Agendas para Eventos",
+    name: "Agenda Automotiva",
     image: agendacarro,
   },
   {
     id: 9,
     category: "agendas-personalizadas",
-    name: "Agendas para Eventos",
+    name: "Agenda Serra Azul",
     image: agendaserraazul,
   },
   {
     id: 10,
     category: "agendas-personalizadas",
-    name: "Agendas para Eventos",
+    name: "Agenda Escolar",
     image: agendadaescola,
   },
   {
     id: 11,
     category: "agendas-personalizadas",
-    name: "Agendas para Eventos",
+    name: "Agenda Pré-Escola",
     image: agendapreescola,
   },
   {
     id: 12,
     category: "agendas-personalizadas",
-    name: "Agendas para Eventos",
+    name: "Agenda Floral",
     image: agendafloral,
   },
   {
     id: 13,
     category: "agendas-personalizadas",
-    name: "Agendas para Eventos",
+    name: "Agenda Personalizada",
     image: agendaadriana,
   },
   {
     id: 14,
     category: "agendas-personalizadas",
-    name: "Agendas para Eventos",
+    name: "Agenda Tema Poker",
     image: agendapoker,
   },
   {
     id: 15,
     category: "agendas-personalizadas",
-    name: "Agendas para Eventos",
+    name: "Agenda Infantil Girafa",
     image: agendagirafa,
   },
   {
     id: 16,
     category: "maternidade",
-    name: "Agendas para Eventos",
+    name: "Agenda Infantil Davi",
     image: agendadavi,
   },
   {
     id: 17,
     category: "maternidade",
-    name: "Agendas para Eventos",
+    name: "Agenda da Saúde",
     image: agendasaude,
   },
   {
     id: 18,
     category: "maternidade",
-    name: "Agendas para Eventos",
+    name: "Caderneta de Saúde",
     image: cadernetadesaude,
   },
   {
     id: 19,
     category: "maternidade",
-    name: "Agendas para Eventos",
+    name: "Caderneta de Saúde Minnie",
     image: cadernetasaudeminie,
   },
   {
     id: 20,
     category: "maternidade",
-    name: "Agendas para Eventos",
+    name: "Caderneta Ursinho",
     image: cadernetaursinho,
-  },
-  {
-    id: 21,
-    category: "maternidade",
-    name: "Agendas para Eventos",
-    image: albumdefotos,
   },
   {
     id: 22,
     category: "maternidade",
-    name: "Agendas para Eventos",
+    name: "Caderneta Ursinha",
     image: cadernetaursinha,
   },
   {
     id: 23,
     category: "maternidade",
-    name: "Agendas para Eventos",
+    name: "Caderneta Esmeralda",
     image: cadernetaesmeralda,
   },
   {
     id: 24,
     category: "maternidade",
-    name: "Agendas para Eventos",
+    name: "Caderneta Helena",
     image: cadernetahelena,
   },
   {
     id: 25,
     category: "planejadores-e-calendarios",
-    name: "Agendas para Eventos",
+    name: "Livro Caixa",
     image: livrocaixa,
   },
   {
     id: 26,
     category: "planejadores-e-calendarios",
-    name: "Agendas para Eventos",
+    name: "Duo Planner",
     image: duoplanner,
   },
   {
     id: 27,
     category: "planejadores-e-calendarios",
-    name: "Agendas para Eventos",
+    name: "Planner Serra Azul",
     image: plannerserraazul,
   },
   {
     id: 28,
     category: "planejadores-e-calendarios",
-    name: "Agendas para Eventos",
+    name: "Planner Empreenda",
     image: plannerempreenda,
   },
   {
     id: 29,
     category: "planejadores-e-calendarios",
-    name: "Agendas para Eventos",
+    name: "Planner de Estudo",
     image: plannerestudo,
   },
   {
     id: 30,
     category: "planejadores-e-calendarios",
-    name: "Agendas para Eventos",
+    name: "Planner Modular",
     image: plannermodular,
   },
   {
     id: 31,
     category: "planejadores-e-calendarios",
-    name: "Agendas para Eventos",
+    name: "Planner da Noiva",
     image: plannernoiva,
   },
   {
     id: 32,
     category: "planejadores-e-calendarios",
-    name: "Agendas para Eventos",
+    name: "Planner de Organização",
     image: plannerorganizacao,
   },
   {
     id: 33,
     category: "planejadores-e-calendarios",
-    name: "Agendas para Eventos",
+    name: "Planner Pedagógico",
     image: plannerpedagogico,
   },
   {
     id: 34,
     category: "mimos-de-sucesso",
-    name: "Agendas para Eventos",
+    name: "Bloco Formando",
     image: blocoformando,
   },
   {
     id: 35,
     category: "mimos-de-sucesso",
-    name: "Agendas para Eventos",
+    name: "Bloco de Notas A6",
     image: blocoa6,
   },
   {
     id: 36,
     category: "mimos-de-sucesso",
-    name: "Agendas para Eventos",
+    name: "Bloquinho",
     image: bloquinho,
   },
   {
     id: 37,
     category: "mimos-de-sucesso",
-    name: "Agendas para Eventos",
+    name: "Caderno para Igreja",
     image: cadernoigreja,
   },
   {
     id: 38,
     category: "mimos-de-sucesso",
-    name: "Agendas para Eventos",
+    name: "Calendários Pequenos",
     image: calendariospequenos,
   },
   {
     id: 39,
     category: "mimos-de-sucesso",
-    name: "Agendas para Eventos",
+    name: "Chaveiro de Acrílico",
     image: chaveiroacrilico,
   },
   {
     id: 40,
     category: "mimos-de-sucesso",
-    name: "Agendas para Eventos",
+    name: "Chaveiro Post",
     image: chaveiropost,
   },
   {
     id: 41,
     category: "mimos-de-sucesso",
-    name: "Agendas para Eventos",
+    name: "Lousa Mágica",
     image: lousamagica,
   },
   {
     id: 42,
     category: "mimos-de-sucesso",
-    name: "Agendas para Eventos",
+    name: "Marca Página",
     image: marcapagina,
   },
   {
     id: 43,
     category: "organizacao-e-inspiracao",
-    name: "Agendas para Eventos",
+    name: "Caderno com Capa Maleável",
     image: cadernocapamaleavel,
   },
   {
     id: 44,
     category: "organizacao-e-inspiracao",
-    name: "Agendas para Eventos",
+    name: "Caderno de Leitura",
     image: cadernoleitura,
   },
   {
     id: 45,
     category: "organizacao-e-inspiracao",
-    name: "Agendas para Eventos",
+    name: "Caderno de Receitas",
     image: cadernodereceitas,
   },
   {
     id: 46,
     category: "organizacao-e-inspiracao",
-    name: "Agendas para Eventos",
+    name: "Caderno de Versículos",
     image: cadernodeversiculos,
   },
   {
     id: 47,
     category: "organizacao-e-inspiracao",
-    name: "Agendas para Eventos",
+    name: "Caderno de Anotações",
     image: cadernodeanotacoes,
   },
   {
     id: 48,
     category: "organizacao-e-inspiracao",
-    name: "Agendas para Eventos",
+    name: "Devocional",
     image: devocional,
   },
   {
     id: 49,
     category: "organizacao-e-inspiracao",
-    name: "Agendas para Eventos",
+    name: "Diário de Sonhos",
     image: diariodesonhos,
   },
   {
     id: 50,
     category: "organizacao-e-inspiracao",
-    name: "Agendas para Eventos",
+    name: "Lista de Compras",
     image: listadecompras,
   },
   {
     id: 51,
     category: "organizacao-e-inspiracao",
-    name: "Agendas para Eventos",
+    name: "Livro Caixa",
     image: livrocaixa,
   },
   {
     id: 52,
     category: "prontos-para-encantar",
-    name: "Agendas para Eventos",
+    name: "Bloco Organizador",
     image: blocoorganizador,
   },
   {
     id: 53,
     category: "prontos-para-encantar",
-    name: "Agendas para Eventos",
+    name: "Bloquinhos",
     image: bloquinhos,
   },
   {
     id: 54,
     category: "prontos-para-encantar",
-    name: "Agendas para Eventos",
+    name: "Mimos de Sucesso",
     image: mimosSucesso,
   },
   {
     id: 55,
     category: "prontos-para-encantar",
-    name: "Agendas para Eventos",
+    name: "Cadernetas de Anotação",
     image: cadernetasdeanotacao,
   },
   {
     id: 56,
     category: "prontos-para-encantar",
-    name: "Agendas para Eventos",
+    name: "Caderno de Anotação",
     image: cadernoanotacao,
   },
   {
     id: 57,
     category: "prontos-para-encantar",
-    name: "Agendas para Eventos",
+    name: "Caderno de Adesivos",
     image: cadernodeadesivos,
   },
   {
     id: 58,
     category: "prontos-para-encantar",
-    name: "Agendas para Eventos",
+    name: "Duo Determinada",
     image: duodeterminada,
   },
   {
     id: 59,
     category: "prontos-para-encantar",
-    name: "Agendas para Eventos",
+    name: "Listinhas",
     image: listinhas,
   },
   {
     id: 60,
     category: "prontos-para-encantar",
-    name: "Agendas para Eventos",
+    name: "Trio de Anotação",
     image: trioanotacao,
   },
 ];
 
 function Gallery() {
-  // --- ALTERAÇÃO 1: O estado inicial agora é a primeira categoria da lista ---
   const [filter, setFilter] = useState("agendas-personalizadas");
 
-  // A lógica de filtragem continua a mesma, mas agora não existe mais o "all"
   const filteredProducts = products.filter((product) => {
     return product.category === filter;
   });
@@ -440,7 +439,6 @@ function Gallery() {
           Nossa Galeria de Encantamento
         </h2>
 
-        {/* --- ALTERAÇÃO 2: O botão "Todos" foi removido do array --- */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {[
             {
@@ -474,7 +472,6 @@ function Gallery() {
           ))}
         </div>
 
-        {/* --- GRID DE IMAGENS --- */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-stretch">
           {filteredProducts.map((product) => (
             <div
@@ -489,6 +486,9 @@ function Gallery() {
                 />
               </div>
               <div className="p-4 flex-grow flex flex-col justify-center items-center">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  {product.name}
+                </h3>
                 <a
                   href="https://arthicipapelariacriativa.lojavirtualnuvem.com.br"
                   target="_blank"

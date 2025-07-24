@@ -96,8 +96,8 @@ function Hero() {
           }`}
         >
           <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-600">
-            Perfeito em cada detalhe! Planeje com beleza e viva com leveza,
-            produtos que transformam rotina de organização!
+            Feito com afeto, propósito e um toque de poesia. Produtos que
+            transformam sua rotina de organização.
           </p>
           <a
             href="https://wa.me/message/UUG3ASGMKYAYE1"
