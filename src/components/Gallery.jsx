@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// --- IMAGENS ---
+// --- IMAGENS (nenhuma alteração aqui) ---
 import agendasPersonalizadas from "../assets/agendas-personalizadas.jpg";
 import cadernetaSaude from "../assets/caderneta-saude.jpg";
 import planejadoresCalendarios from "../assets/planejadores-calendarios.jpg";
@@ -59,7 +59,8 @@ import cadernodeadesivos from "../assets/caderno-de-adesivos.jpg";
 import duodeterminada from "../assets/duo-determinada.jpg";
 import listinhas from "../assets/listinhas.jpg";
 import trioanotacao from "../assets/trio-anotacao.jpg";
-// --- LISTA DE PRODUTOS ---
+
+// --- LISTA DE PRODUTOS (nenhuma alteração aqui) ---
 const products = [
   {
     id: 1,
@@ -424,10 +425,11 @@ const products = [
 ];
 
 function Gallery() {
-  const [filter, setFilter] = useState("all");
+  // --- ALTERAÇÃO 1: O estado inicial agora é a primeira categoria da lista ---
+  const [filter, setFilter] = useState("agendas-personalizadas");
 
+  // A lógica de filtragem continua a mesma, mas agora não existe mais o "all"
   const filteredProducts = products.filter((product) => {
-    if (filter === "all") return true;
     return product.category === filter;
   });
 
@@ -438,10 +440,9 @@ function Gallery() {
           Nossa Galeria de Encantamento
         </h2>
 
-        {/* --- BOTÕES DE FILTRO --- */}
+        {/* --- ALTERAÇÃO 2: O botão "Todos" foi removido do array --- */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {[
-            { value: "all", label: "Todos" },
             {
               value: "agendas-personalizadas",
               label: "Agendas Personalizadas",
@@ -473,7 +474,7 @@ function Gallery() {
           ))}
         </div>
 
-        {/* --- GRID DE IMAGENS (COM BOTÃO "VER NA LOJA") --- */}
+        {/* --- GRID DE IMAGENS --- */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-stretch">
           {filteredProducts.map((product) => (
             <div
@@ -487,8 +488,6 @@ function Gallery() {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
-
-              {/* --- ÁREA DO BOTÃO (SUBSTITUINDO O NOME DO PRODUTO) --- */}
               <div className="p-4 flex-grow flex flex-col justify-center items-center">
                 <a
                   href="https://arthicipapelariacriativa.lojavirtualnuvem.com.br"
