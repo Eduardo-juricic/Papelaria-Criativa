@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// Verifique se o caminho da importação da sua logo está correto
+import { FaInstagram } from "react-icons/fa"; // 1. Ícone do Instagram importado
 import logoComPrimor from "../assets/papelaria-pessoal-logo.jpg";
 
 function Header() {
@@ -18,7 +18,7 @@ function Header() {
         </a>
 
         {/* --- NAVEGAÇÃO PARA DESKTOP --- */}
-        <nav className="hidden md:flex">
+        <nav className="hidden md:flex items-center">
           <ul className="flex flex-row space-x-8">
             <li>
               <a
@@ -45,6 +45,16 @@ function Header() {
               </a>
             </li>
           </ul>
+          {/* 2. Ícone do Instagram adicionado na navegação de desktop */}
+          <a
+            href="https://www.instagram.com/arthicipapelariapessoal?igsh=c2J4OWRqMGh2ZGc2&utm_source=qr"
+            target="_blank"
+            rel="noreferrer"
+            className="text-2xl text-gray-700 hover:text-custom-pink transition-colors duration-300 ml-8"
+            aria-label="Instagram"
+          >
+            <FaInstagram />
+          </a>
         </nav>
 
         {/* --- BOTÃO HAMBURGUER PARA MOBILE --- */}
@@ -112,6 +122,20 @@ function Header() {
                 className="block text-lg font-medium text-gray-700 hover:text-custom-pink"
               >
                 Galeria
+              </a>
+            </li>
+            {/* 3. Link do Instagram adicionado no menu mobile */}
+            <li>
+              <a
+                href="https://www.instagram.com/arthicipapelariapessoal?igsh=c2J4OWRqMGh2ZGc2&utm_source=qr"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center text-lg font-medium text-gray-700 hover:text-custom-pink"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="mr-2" />
+                Instagram
               </a>
             </li>
           </ul>

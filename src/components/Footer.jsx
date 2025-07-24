@@ -17,7 +17,7 @@ export default function Footer() {
           {/* 3. Ícones e efeito hover ajustados */}
           <div className="flex space-x-6">
             <a
-              href="https://www.instagram.com/comprimor?igsh=MWNoa3lyZ3o4eWRxYg=="
+              href="https://www.instagram.com/arthicipapelariapessoal?igsh=c2J4OWRqMGh2ZGc2&utm_source=qr" // <-- LINK DO INSTAGRAM ATUALIZADO
               target="_blank"
               rel="noreferrer"
               className="text-2xl hover:text-pink-500 transition-colors duration-300"
@@ -26,7 +26,7 @@ export default function Footer() {
               <FaInstagram />
             </a>
             <a
-              href="https://wa.me/message/UUG3ASGMKYAYE1"
+              href="http://wa.me/5538999176677" // <-- LINK DO WHATSAPP ATUALIZADO
               target="_blank"
               rel="noreferrer"
               className="text-2xl hover:text-pink-500 transition-colors duration-300"

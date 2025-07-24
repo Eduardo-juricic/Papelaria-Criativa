@@ -7,6 +7,7 @@ import "./index.css";
 import Gallery from "./components/Gallery";
 import CallToAction from "./components/CallToAction";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Gallery />
       <CallToAction />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
