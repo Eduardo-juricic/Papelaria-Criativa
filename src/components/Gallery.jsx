@@ -492,12 +492,12 @@ function Gallery() {
                   {product.name}
                 </h3>
                 <a
-                  href="https://arthicipapelariacriativa.lojavirtualnuvem.com.br"
+                  href="http://wa.me/5538999176677"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-2 px-6 py-2 bg-pink-600 text-white font-semibold rounded-full shadow-lg hover:bg-pink-700 transition duration-300"
                 >
-                  Ver na Loja
+                  Chamar no WhatsApp 📱
                 </a>
               </div>
             </div>

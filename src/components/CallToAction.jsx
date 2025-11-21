@@ -79,7 +79,7 @@ const CallToAction = () => {
           exclusividade.
         </p>
         <a
-          href="https://arthicipapelariacriativa.lojavirtualnuvem.com.br"
+          href="https://www.instagram.com/arthicipapelariapessoal?igsh=c2J4OWRqMGh2ZGc2&utm_source=qr"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-10 py-4 rounded-full text-lg font-bold bg-pink-500 text-white shadow-lg hover:bg-pink-600 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50 transition-all duration-300"

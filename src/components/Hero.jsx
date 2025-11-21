@@ -100,7 +100,7 @@ function Hero() {
             transformam sua rotina de organização.
           </p>
           <a
-            href="https://arthicipapelariacriativa.lojavirtualnuvem.com.br"
+            href="http://wa.me/5538999176677"
             target="_blank"
             rel="noopener noreferrer"
             className="neon-button"
