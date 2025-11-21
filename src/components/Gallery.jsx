@@ -101,8 +101,8 @@ const products = [
   // --- ALTERAÇÕES NESTE BLOCO ---
   {
     id: 6,
-    category: "pronta-entrega",
-    name: "Itens a Pronta Entrega",
+    category: "agendas-personalizadas",
+    name: "Planner",
     image: prontosParaEncantar,
   },
   {
@@ -448,7 +448,7 @@ function Gallery() {
             },
             { value: "maternidade", label: "Maternidade" },
             {
-              value: "planejadores-e-calendarios",
+              value: "Planejadores e Calendários",
               label: "Planejadores e Calendários",
             },
             { value: "mimos-de-sucesso", label: "Mimos de Sucesso" },
